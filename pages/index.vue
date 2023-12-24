@@ -3,6 +3,10 @@ const testeStore = useTesteStore();
 const { count } = storeToRefs(testeStore);
 const { increment } = testeStore;
 
+const respose = await $fetch("/api/hello");
+
+console.log(respose);
+
 console.log(count.value);
 </script>
 
