@@ -4,6 +4,8 @@ const { count } = storeToRefs(testeStore);
 const { decrement } = testeStore;
 
 console.log(count.value);
+
+const id = ref(0);
 </script>
 
 <template>
@@ -14,8 +16,12 @@ console.log(count.value);
     <h1>Home</h1>
     <p>{{ count }}</p>
     <button @click="decrement">decrementar var do pinia</button>
+    <br /><br />
+    <input type="number" v-model="id" />
     <br />
-    <NuxtLink to="/">index</NuxtLink>
+    <p>{{ id }}</p>
+    <br /><br />
+    <NuxtLink :to="'users/' + id">Users</NuxtLink>
     <br /><br />
   </main>
 </template>

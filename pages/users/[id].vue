@@ -6,6 +6,6 @@ console.log(route.params);
 
 <template>
   <div>
-    <h1>Users page</h1>
+    <h1>Hello user {{ route.params.id }}</h1>
   </div>
 </template>
